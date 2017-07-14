@@ -1,0 +1,103 @@
+/**
+* c-bdUI border style;
+*
+*/
+
+@import "./var.scss";
+
+@mixin position($postion){
+    position: $postion;
+    top: 0;
+    left: 0;
+}
+
+@mixin c-bdUI($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        width: 200%;
+        height: 200%;
+        border: $bdwidth solid $bdcolor;
+        transform: scale(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}
+
+@mixin c-bdUI-t($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        width: 100%;
+        border-top: $bdwidth solid $bdcolor;
+        transform: scaleY(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}
+
+@mixin c-bdUI-r($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        height: 100%;
+        border-right: $bdwidth solid $bdcolor;
+        transform: scaleX(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}
+
+@mixin c-bdUI-b($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        width: 100%;
+        border-bottom: $bdwidth solid $bdcolor;
+        transform: scaleY(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}
+
+@mixin c-bdUI-l($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        height: 100%;
+        border-left: $bdwidth solid $bdcolor;
+        transform: scaleX(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}
+
+@mixin c-bdUI-tb($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        width: 200%;
+        height: 200%;
+        border: $bdwidth solid $bdcolor;
+        border-right: 0;
+        border-left: 0;
+        transform: scale(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}
+
+@mixin c-bdUI-rl($bdwidth){
+    position: relative;
+    &:before{
+        content: '';
+        width: 200%;
+        height: 200%;
+        border: $bdwidth solid $bdcolor;
+        border-top: 0;
+        border-bottom: 0;
+        transform: scale(.5);
+        transform-origin: 0 0;
+        @include position(absolute);
+    }
+}

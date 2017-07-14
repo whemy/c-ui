@@ -1,0 +1,57 @@
+/**
+*
+* c-boxUI box style
+*
+*/
+
+@import "./var.scss";
+@import "./border.scss";
+@import "./base.scss";
+
+.c-boxUI{
+    width: 100%;
+    background-color: $white;
+    padding: .875rem .8125rem;
+    @include c-bdUI-tb;
+    .c-boxUI-l{
+        img{
+            width: 5rem;
+            height: 5rem;
+            margin-right: 10px;
+            box-shadow: 0px 0px 1px 0px rgba(0,0,0,.35);
+        }
+    }
+    .c-boxUI-m{
+        @include flexbox;
+        h2{
+            font-size: .75rem;
+            font-weight: normal;
+            line-height: 1.25;
+            @include wrapblock(2);
+        }
+        h3{
+            font-size: .7rem;
+            font-weight: normal;
+            color: $submaincolor;
+            &.state{
+                position: static !important;
+                margin-top: 3px;
+            }
+            &::last-child{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+        h4{
+            font-size: .6rem;
+            font-weight: normal;
+            margin-top: 8px;
+        }
+        .tr-corner{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

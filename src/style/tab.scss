@@ -1,0 +1,32 @@
+/**
+*
+* c-tabUI tab style
+*
+*/
+@import "./var.scss";
+@import "./border.scss";
+@import "./base.scss";
+.c-tabsUI{}
+.c-tabsUI .tab{font-size: 1rem;background-color: #fff;padding: 5px 0;border-bottom: 1px solid  #ededed;text-align: center;}
+.c-tabsUI .tab.active{border-bottom-color: #ff4444;color: #ff4444;}
+.c-tabsUI .tab a.tab-href{display: block;margin: 10px 0;position: relative;}
+.c-tabsUI .tab a.tab-href:after{content: '';position: absolute;top: 0;right: 0;width: 1px;height: 100%;background-color: #ededed;}
+.c-tabsUI .tab:last-child a.tab-href:after{content: '';width: 0;}
+.c-tabsUI .tab a.tab-href p{margin-top: 5px;}
+/* nav-tab without border-right */
+.nav-tab{position: relative;}
+.nav-tab .nav-type{background-color: #fff;}
+.nav-tab .nav-type li{font-size: 0.9285rem;text-align: center;color: #666;padding: 0.7rem 0;border-bottom: 1px solid  #f3f3f3;}
+.nav-tab .nav-type li.cur{border-bottom: 2px solid #ff5000;color: #ff4444;}
+@mixin c-tabUI{
+    .tab{
+        font-size: .7rem;
+        background-color: $white;
+        padding: 5px 0;
+        text-align: center;
+        @include c-bdUI-b;
+        &active{
+            
+        }
+    }
+}
