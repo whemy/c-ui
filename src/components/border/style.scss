@@ -11,74 +11,74 @@
     left: 0;
 }
 
-@mixin c-bdUI($bdwidth){
+@mixin c-bdUI{
     position: relative;
     &:before{
         content: '';
         width: 200%;
         height: 200%;
-        border: $bdwidth solid $bdcolor;
+        border: 1px solid $bdcolor;
         transform: scale(.5);
         transform-origin: 0 0;
         @include position(absolute);
     }
 }
 
-@mixin c-bdUI-t($bdwidth){
+@mixin c-bdUI-t{
     position: relative;
     &:before{
         content: '';
         width: 100%;
-        border-top: $bdwidth solid $bdcolor;
+        border-top: 1px solid $bdcolor;
         transform: scaleY(.5);
         transform-origin: 0 0;
         @include position(absolute);
     }
 }
 
-@mixin c-bdUI-r($bdwidth){
+@mixin c-bdUI-r{
     position: relative;
     &:before{
         content: '';
         height: 100%;
-        border-right: $bdwidth solid $bdcolor;
+        border-right: 1px solid $bdcolor;
         transform: scaleX(.5);
         transform-origin: 0 0;
         @include position(absolute);
     }
 }
 
-@mixin c-bdUI-b($bdwidth){
+@mixin c-bdUI-b{
     position: relative;
     &:before{
         content: '';
         width: 100%;
-        border-bottom: $bdwidth solid $bdcolor;
+        border-bottom: 1px solid $bdcolor;
         transform: scaleY(.5);
         transform-origin: 0 0;
         @include position(absolute);
     }
 }
 
-@mixin c-bdUI-l($bdwidth){
+@mixin c-bdUI-l{
     position: relative;
     &:before{
         content: '';
         height: 100%;
-        border-left: $bdwidth solid $bdcolor;
+        border-left: 1px solid $bdcolor;
         transform: scaleX(.5);
         transform-origin: 0 0;
         @include position(absolute);
     }
 }
 
-@mixin c-bdUI-tb($bdwidth){
+@mixin c-bdUI-tb{
     position: relative;
     &:before{
         content: '';
         width: 200%;
         height: 200%;
-        border: $bdwidth solid $bdcolor;
+        border: 1px solid $bdcolor;
         border-right: 0;
         border-left: 0;
         transform: scale(.5);
@@ -87,13 +87,13 @@
     }
 }
 
-@mixin c-bdUI-rl($bdwidth){
+@mixin c-bdUI-rl{
     position: relative;
     &:before{
         content: '';
         width: 200%;
         height: 200%;
-        border: $bdwidth solid $bdcolor;
+        border: 1px solid $bdcolor;
         border-top: 0;
         border-bottom: 0;
         transform: scale(.5);
