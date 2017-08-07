@@ -45,6 +45,8 @@
         transform: scaleX(.5);
         transform-origin: 0 0;
         @include position(absolute);
+        left: auto;
+        right: 0;
     }
 }
 
@@ -57,6 +59,8 @@
         transform: scaleY(.5);
         transform-origin: 0 0;
         @include position(absolute);
+        top: auto;
+        bottom: 0;
     }
 }
 

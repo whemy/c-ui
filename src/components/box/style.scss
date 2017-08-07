@@ -4,25 +4,27 @@
 *
 */
 
-@import "./var.scss";
-@import "./border.scss";
-@import "./base.scss";
+@import "../var.scss";
+@import "../base.scss";
+@import "../border.scss";
 
 .c-boxUI{
-    width: 100%;
+    padding: .875rem 0;
+    margin: 0 .8125rem;
     background-color: $white;
-    padding: .875rem .8125rem;
-    @include c-bdUI-tb;
+    @include c-bdUI-b;
+    @include flex;
     .c-boxUI-l{
         img{
-            width: 5rem;
-            height: 5rem;
+            width: 4rem;
+            height: 4rem;
             margin-right: 10px;
             box-shadow: 0px 0px 1px 0px rgba(0,0,0,.35);
         }
     }
     .c-boxUI-m{
         @include flexbox;
+        position: relative;
         h2{
             font-size: .75rem;
             font-weight: normal;
@@ -37,7 +39,7 @@
                 position: static !important;
                 margin-top: 3px;
             }
-            &::last-child{
+            &:last-child{
                 position: absolute;
                 bottom: 0;
                 width: 100%;

@@ -1,0 +1,111 @@
+html {
+	font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif,'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 125%;
+}
+
+body {
+	margin: 0;
+	font-family: inherit;
+	font-size: 16px;
+	line-height: 1.5;
+	-webkit-overflow-scrolling: touch;
+	color: #333;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary,menu {
+	display: block;
+}
+
+audio,canvas,progress,video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+a {
+	background: transparent;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	color: inherit;
+}
+
+a:active {
+	outline: 0;
+}
+
+button,input,optgroup,select,textarea {
+	color: inherit;
+	font: inherit;
+	outline: 0 none;
+}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]::-webkit-file-upload-button,input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	appearance: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul,ol,menu,li {
+	list-style: none;
+}
+
+address,cite,dfn,em,i,optgroup,var {
+	font-style: normal
+}
+
+ul,ol,li,dl,dd,h1,h2,h3,h4,h5,h6,figure,form,fieldset,legend,input,textarea,button,p,blockquote,th,td,pre {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+
+fieldset,img {
+	border: 0;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+*,::before,::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent
+}
+
+.cl {
+	zoom: 1;
+}
+
+.cl:after {
+	content: '\0020';
+	display: block;
+	height: 0;
+	clear: both;
+}[class^=icon-]:before,[class*=icon-]:before {
+	font-family: "iconfont" !important;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+};
