@@ -10,11 +10,10 @@ import './style';
 class Box extends React.Component{
     render(){
         return (
-            <div className="c-boxUI">
-                <div className="c-boxUI-l"><img src="/src/images/head-like.jpg" alt=""/></div>
+            <div className="c-boxUI" data-name={this.props.type}>
+                <div className="c-boxUI-l"><img src={this.props.img} alt="" /></div>
                 <div className="c-boxUI-m">
-                    <h2>h2 title</h2>
-                    <h3>h3 title</h3>
+                    <h2>h2 tilte</h2>
                 </div>
                 <div className="c-boxUI-r"></div>
             </div>

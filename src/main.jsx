@@ -1,9 +1,44 @@
 import React from 'react';
 import ReactDom, {render} from 'react-dom';
-import Box from './components/box/Box.jsx';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk'; // 中间键，diapatch异步实现
+import { browserHistory} from 'react-router'; //  路由
+import { syncHistoryWithStore } from 'react-router-redux'; // 路由使用redux管理
 import './config/config.js';
+import "./components/normal.scss";
+
+import Routers from './Router.jsx';
+
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+
+// redux 调试工具
+import { createDevTools } from 'redux-devtools';
+import LogMonitor from 'redux-devtools-log-monitor';
+import DockMonitor from 'redux-devtools-dock-monitor';
+const DevTools = createDevTools(
+  // redux在线调试工具的快捷键控制 toggleVisibilityKey：是否显示 changePositionKey：显示位置
+  <DockMonitor defaultIsVisible={false} toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
+    <LogMonitor theme="tomorrow" preserveScrollTop={false} bottom="0" />
+  </DockMonitor>
+);
+
+// 获取合并后的 reducer
+import rootReducer from './reducers/index.jsx';
+
+// 注册store
+const store = createStore(
+  rootReducer, 
+  DevTools.instrument(), // 注册调试工具
+  applyMiddleware(thunk)
+);
+
+// 保持历史同步
+const history = syncHistoryWithStore(browserHistory, store);
 
 render(
-    <Box />,
+    <Provider store={store}>
+        <Routers history={history} />
+        <DevTools />
+    </Provider>,
     document.getElementById('app')
 )
