@@ -56,7 +56,6 @@ button::-moz-focus-inner,input::-moz-focus-inner {
 
 input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]::-webkit-file-upload-button,input[type="search"]::-webkit-search-cancel-button {
 	-webkit-appearance: none;
-	appearance: none
 }
 
 table {
@@ -85,8 +84,6 @@ fieldset,img {
 }
 
 *,::before,::after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent
 }
@@ -104,4 +101,8 @@ fieldset,img {
 .iconfont {
 	font-size: 26px;
 	line-height: 26px;
+}
+.r180{
+	transform: rotate(180deg);
+	display: block;
 }

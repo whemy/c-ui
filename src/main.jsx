@@ -1,15 +1,14 @@
+'use strict'
+import './config/config.js';
+import './components/normal.scss';
 import React from 'react';
-import ReactDom, {render} from 'react-dom';
+import {render} from 'react-dom';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk'; // 中间键，diapatch异步实现
-import { browserHistory} from 'react-router'; //  路由
+import { browserHistory } from 'react-router'; //  路由
 import { syncHistoryWithStore } from 'react-router-redux'; // 路由使用redux管理
-import './config/config.js';
-import "./components/normal.scss";
 
-import Routers from './Router.jsx';
-
-import {createStore, combineReducers, applyMiddleware} from 'redux';
 
 // redux 调试工具
 import { createDevTools } from 'redux-devtools';
@@ -20,10 +19,11 @@ const DevTools = createDevTools(
   <DockMonitor defaultIsVisible={false} toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
     <LogMonitor theme="tomorrow" preserveScrollTop={false} bottom="0" />
   </DockMonitor>
-);
+); 
+import Routers from './Router';
 
 // 获取合并后的 reducer
-import rootReducer from './reducers/index.jsx';
+import rootReducer from './reducers/index';
 
 // 注册store
 const store = createStore(

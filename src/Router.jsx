@@ -1,20 +1,20 @@
-'use strict';
+
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, IndexRedirect } from 'react-router';
 import { browserHistory, hashHistory } from 'react-router';
 
 //c-list
-import List from './components/list/List.jsx';
+import List from './components/list/List';
 
 //c-box
-import Box from './components/box/Box.jsx';
+import Box from './components/box/Box';
 
 class Routers extends React.Component{
     render(){
         return(
-            <Router history={this.props.history}>
-                <Router component={List} />
-                <Router component={Box} />
+            <Router history={hashHistory}>
+                <Route path="/list" component={List}/>
+                <Route path="/box" component={Box}/>
             </Router>
         );
     }
