@@ -98,11 +98,25 @@ fieldset,img {
 	height: 0;
 	clear: both;
 }
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
 .iconfont {
 	font-size: 26px;
 	line-height: 26px;
 }
+
 .r180{
 	transform: rotate(180deg);
 	display: block;
+}
+
+.fz-sm{
+	font-size: 65%;
 }

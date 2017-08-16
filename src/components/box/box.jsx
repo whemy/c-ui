@@ -8,21 +8,34 @@ import ReactDom from 'react-dom';
 import './style';
 
 class Box extends React.Component{
-    render(){
+    boxRender(){
+        const {box = []} = this.props;
         return (
-            <div className="c-boxUI" data-name={this.props.type}>
-                <div className="c-boxUI-l"><img src={this.props.img} alt="" /></div>
-                <div className="c-boxUI-m">
-                    {/*父子组件间通信*/}
-                    {this.props.h2s.map((h2,i) => {
-                        return <h2 key={i}>{h2}</h2>
-                    })}
-                    {this.props.h3s.map((h3,i) => {
-                        return <h3 key={i}>{h3}</h3>
-                    })}
-                </div>
-                <div className="c-boxUI-r"></div>
-            </div>
+            box.map((item,index) => {
+                let {img, h2s, h3s} = item;
+                console.log(item,h2s);
+                console.log(h2s[1])
+                return  <li className="c-boxUI" key={index}>
+                            <div className="c-boxUI-l"><img src={img} alt="" /></div>
+                            <div className="c-boxUI-m">
+                                {/*父子组件间通信*/}
+                                {h2s.map((item,p) => {
+                                    return <h2 key={p}>{item}</h2>
+                                })}
+                                {h3s.map((item,q) => {
+                                    return <h3 key={q}>{item}</h3>
+                                })}
+                            </div>
+                            <div className="c-boxUI-r"></div>
+                        </li>
+            })
+        )
+    }
+    render(){
+        return(
+            <ul className="box">
+                {this.boxRender()}
+            </ul>
         )
     }
 }

@@ -48,3 +48,10 @@
     flex-direction: column;
     align-items: center;
 }
+
+.df{
+    @include flex;
+}
+.df-box{
+    @include flexbox;
+}
