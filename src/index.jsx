@@ -29,7 +29,7 @@ const boxItem = [
 ]
 render(
     <div>
-        <Header title="C-UI Header" rightxt={"点我"} />
+        <Header title="C-UI Header" rightxt={"点我"} leftxt={<i className='iconfont icon-menu'></i>} />
         <Tab>
             <TabPane tab="tab 1">内容一</TabPane>
             <TabPane tab="tab 2">内容二</TabPane>

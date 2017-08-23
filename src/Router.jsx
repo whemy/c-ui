@@ -7,12 +7,16 @@ import { browserHistory, hashHistory } from 'react-router';
 import List from './components/list/List';
 
 //c-box
-import Box from './components/box/Box';
+const Box = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('./components/box/Box').default)
+    },'Box')
+}
 
 class Routers extends React.Component{
     render(){
         return(
-            <Router history={hashHistory}>
+            <Router history={this.props.history}>
                 <Route path="/list" component={List}/>
                 <Route path="/box" component={Box}/>
             </Router>

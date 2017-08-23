@@ -29,10 +29,14 @@
         width: 4rem;
         text-align:left;
         padding-left: 12px;
-        i.iconfont{
-            margin-top: 7px;
-            margin-left: -7px;
+        i.icon-fanhui{
+            font-size: 18px;
             text-align: right;
+            margin-left: 5px;
+        }
+        i:not(.icon-fanhui){
+            font-size: 22px;
+            line-height: inherit;
         }
     }
     &.right{

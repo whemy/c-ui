@@ -6,7 +6,7 @@ import './style';
 class Header extends React.Component{
     render(){
         let {title,rightxt,leftxt,...item} = this.props;
-        const left = leftxt && leftxt || '' ? leftxt : <i className='iconfont icon-zuojiantou r180'></i>;
+        const left = leftxt && leftxt || '' ? leftxt : <i className='iconfont icon-fanhui'></i>;
         return (
             <header className="head-com">
                 <div className="head-comMain">
